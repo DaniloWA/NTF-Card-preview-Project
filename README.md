@@ -1,1 +1,1 @@
-NTF-Card-preview Project
+NFT preview card component

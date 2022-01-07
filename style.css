@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: hsl(217, 54%, 11%);
+    font-family: 'Roboto', sans-serif;
+}
+
+.conteiner{
+    box-shadow: -15px 35px 10px rgba(0, 0, 0, 0.473),15px 35px 10px rgba(0, 0, 0, 0.473),-35px -25px 10px rgba(0, 0, 0, 0.473),35px -25px 10px rgba(0, 0, 0, 0.473),35px 75px 10px rgba(0, 0, 0, 0.473),-35px 75px 10px rgba(0, 0, 0, 0.473);;
+    position: absolute;
+    border-radius: 25px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    padding: 20px;
+    margin: 0 auto;
+    background-color: hsl(216, 50%, 16%);
+    width: 300px;
+    height: 550px;
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows: 13fr 5fr 3fr 0.1fr 3fr;
+    grid-template-areas:  
+    'img img'
+    'txt txt'
+    'moeda data'
+    'hr hr'
+    'pessoa pessoa' 
+    ;
+}
+
+.img{
+    grid-area: img;
+    background: url(images/image-equilibrium.jpg);
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.txt{
+    grid-area: txt;
+    
+}
+.txt p {
+    padding-top: 15px;
+    color: hsl(215, 51%, 70%);
+}
+.txt h1 {
+    margin-top: 20px;
+    font-size: 28px;
+    color: white;
+}
+.moeda{
+    display: grid;
+    align-self: center;
+    grid-area: moeda;
+    grid-template-columns: 0.3fr 2.5fr;
+    grid-template-areas: 
+        'SVGmoeda pmoeda'
+    ;
+}
+.moeda svg{
+    grid-area: SVGmoeda;
+    justify-self: start;
+}
+
+.moeda p {
+    grid-area: pmoeda;
+    justify-self: start;
+    color: hsl(178, 100%, 50%);
+}
+.data{
+    justify-self: end;
+    align-self: center;
+    grid-area: data;
+    display: grid;
+    grid-template-columns: 0.5fr 2fr;
+    grid-template-areas:  
+        'svgData pData'
+    ;
+}
+.data p {
+    grid-area:pData;
+    color: hsl(215, 51%, 70%);
+}
+.data svg{
+    grid-area: svgData;
+    justify-self: start;
+    align-self: center;
+}
+hr{
+    background-color:hsl(215, 32%, 27%);
+    border: none;
+    width: 100%;
+    height: 0.1px;
+    grid-area: hr;
+}
+.pessoa{
+    grid-area: pessoa;
+    display: grid;
+    grid-template-columns: 0.4fr 2fr;
+}
+.pessoa p {
+    color: hsl(215, 51%, 70%);
+    align-self: center;
+}
+.pessoa p span {
+    color: white;
+}
+.pessoa img {
+    align-self: center;
+    border-radius: 50%;
+    border:1px solid white;
+    width: 30px;
+    height: 30px;
+}
+
+/*  
+    <div class="conteiner">
+    <div class="img"></div>
+    <div class="txt"></div>
+    <div class="moeda"></div>
+    <div class="data"></div>
+    <hr>
+    <div class="pessoa"></div>
+  </div>
+
+  */
